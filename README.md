@@ -46,6 +46,8 @@ transpose and matrix itself are different views over the same buffer. they inter
 
 the buffer and internal state of matrix will not be initialized until you call .tr or .get or .set on it.
 
+also feel free to get values of .rows and .cols attributes of float2dm matrix.
+
 please check your args before invoking it!
 
 

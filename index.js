@@ -12,18 +12,18 @@ function init(m) {
   }
 
   if (!m.buf) {
-    m.buf = new Buffer(m.len1 * m.len2 * m.bpv);
+    m.buf = new Buffer(m.rows * m.cols * m.bpv);
   }
 
-  m.stride = [m.len2, 1];
+  m.stride = [m.cols, 1];
 }
 
-function float2dm(len1, len2, dp) {
-  assert(len1);
-  assert(len2);
+function float2dm(rows, cols, dp) {
+  assert(rows);
+  assert(cols);
 
-  this.len1 = len1;
-  this.len2 = len2;
+  this.rows = rows;
+  this.cols = cols;
   this.dp = dp;
 }
 
@@ -58,7 +58,7 @@ float2dm.prototype.tr = function () {
     init(this);
   }
 
-  cview = new float2dm(this.len1, this.len2, this.dp);
+  cview = new float2dm(this.rows, this.cols, this.dp);
   cview.buf = this.buf;
   
   init(cview);
