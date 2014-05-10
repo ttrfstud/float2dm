@@ -42,5 +42,5 @@ please check your args before invoking it!
 
 ack
 ========
-it is of course inspired by (ndarrays)[https://github.com/mikolalysenko/ndarray/].
+it is of course inspired by [ndarrays](https://github.com/mikolalysenko/ndarray/).
 
