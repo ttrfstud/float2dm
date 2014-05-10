@@ -27,16 +27,25 @@ you can .tr (transpose) it, like this:
 ```javascript
 var matrix = require('float2dm');
 
+var mt;
 var m = new matrix(2, 3);
 
 m.set(1, 2, 3.2);
+m.set(2, 1, 3.3);
 
-m.tr();
+mt = m.tr();
 
-console.log(m.get(2, 1));
+console.log(mt.get(2, 1));
+console.log(mt.get(1, 2));
 
-// prints: 3.2
+// first prints: 3.2
+// then prints: 3.3
 ```
+
+transpose and matrix itself are different views over the same buffer. they internally reference the elements of underlying buffer a bit differently.
+
+the buffer and internal state of matrix will not be initialized until you call .tr or .get or .set on it.
+
 please check your args before invoking it!
 
 
