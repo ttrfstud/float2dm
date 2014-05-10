@@ -1,13 +1,8 @@
 {
-  "name": "double2dm",
+  "name": "float2dm",
   "version": "0.0.0",
-  "description": "2d matrix of doubles",
+  "description": "2d matrix of floats",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "taptap": "0.0.3"
   }
